@@ -34,13 +34,13 @@
 			   		</a> 
 			   		<ul class="nav">
 			   			<li class="active">
-			   				<a href=" {{firms_url}}">
+			   				<a href=" {{products_url}}">
 			   					home
 			   				</a>
 			   			</li>
 			   			<li>
-			   				<a href="{{products_url}}">
-			   					products
+			   				<a href="{{firms_url}}">
+			   					businesses
 			   				</a>
 			   			</li>
 			   			<li>
@@ -100,27 +100,7 @@
 
 	    
     <div role="main">
-        {% block content %}
-        
-        		<!-- Looks like a good construction for menu items. -->
-        		<!--
-           		{% if user.is_authenticated %}
-	        		{% url what_next as what_next_url %}
-	        		<p class="what_next">{% blocktrans %}Wondering <a href="{{ what_next_url }}" class="btn primary large">What Next</a>?{% endblocktrans %}</p>
-	    		{% else %}
-	        		{% url acct_login as login_url %}
-	        	{% ifsetting ACCOUNT_OPEN_SIGNUP %}
-	            	{% url acct_signup as signup_url %}
-	            	<p>{% blocktrans %}You can <a href="{{ login_url }}" class="btn">Log In</a> or <a href="{{ signup_url }}" class="btn primary">Sign Up</a> to try out the site.{% endblocktrans %}</p>
-	        	{% else %}
-	            	<p>{% blocktrans %}You can <a href="{{ login_url }}" class="btn primary large">Log In</a> to try out the site.{% endblocktrans %}</p>
-	        		{% endifsetting %}
-    			{% endif %}
-        		--> 
-        
-        {% endblock content %}
-        
-       
+      
     </div>
     
     

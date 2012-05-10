@@ -28,11 +28,11 @@ MANAGERS = ADMINS
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.mysql", 
+        "ENGINE": "django.db.backends.postgresql_psycopg2", 
         "NAME": "parrishstreet_development",                       
         "USER": "mitharris",                             
         "PASSWORD": "Flintmi25",                         
-        "HOST": "",                           
+        "HOST": "localhost",                           
         "PORT": "",                             
     }
 }
@@ -177,8 +177,7 @@ INSTALLED_APPS = [
     "about",
     "profiles",
     #"geo",
-    #"firms",
-    #"products",
+    "firms",
 ]
 
 LOGGING = {
@@ -223,6 +222,7 @@ ACCOUNT_UNIQUE_EMAIL = EMAIL_CONFIRMATION_UNIQUE_EMAIL = True
 
 AUTHENTICATION_BACKENDS = [
     "pinax.apps.account.auth_backends.AuthenticationBackend",
+    "django.contrib.auth.backends.ModelBackend",
 ]
 
 LOGIN_URL = "/account/login/" # @@@ any way this can be a url name?
