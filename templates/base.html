@@ -29,30 +29,45 @@
 	    <div class="navbar">
 			<div class="navbar-inner">
 			   <div class="container">
-			   		<a class="brand" href="{{firms_url}}">
+			   		<a class="brand" href="{{home_url}}">
 			   		PARRISHSTREET
 			   		</a> 
 			   		<ul class="nav">
 			   			<li class="active">
-			   				<a href=" {{products_url}}">
+			   				<a href=" {{home_url}}">
 			   					home
 			   				</a>
 			   			</li>
 			   			<li>
-			   				<a href="{{firms_url}}">
+			   				<a href="{{firms.get_absolute_url}}">
 			   					businesses
 			   				</a>
 			   			</li>
 			   			<li>
-			   				<a href="{{geo_url}}">
-			   					location
+			   				<a href="{{products_url}}">
+			   					products
+			   				</a>
+			   			</li>
+			   			<li>
+			   				<a href="{{services_url}}">
+			   					services
+			   				</a>
+			   			</li>
+			   			<li>
+			   				<a href="{{journal_url}}">
+			   					journal
+			   				</a>
+			   			</li>
+			   			<li>
+			   				<a href="{{statistics_url}}">
+			   					statistics
 			   				</a>
 			   			</li>
 			   		 </ul>
 			   		 <ul class="nav pull-right">
 			   		 	<li class="dropdown">
-			   		 		<a href="{{ login_url }}" class="dropdown-toggle" data-toggle="dropdown">
-			   		 			<i class="icon-user"></i>
+			   		 		<a href="{{ login_url }}" >
+			   		 		login
 			   		 		</a>
 			   		 	</li>
 			   		 		<ul class="dropdown-menu">
@@ -71,6 +86,11 @@
 			   		 		        logout
 			   		 		        </a>
 			   		 		    </li>
+			   		 		    <li>
+			   				        <a href="{{recommended_url}}">
+			   					    recommendations
+			   				        </a>
+			   			        </li>
 			   		 		</ul>
 			   		 	
 			   		 	
@@ -93,7 +113,6 @@
 <!-- Here begins the sub-navigation behavior -->
 			<div class="subnav">
 			</div>    
-		</div>
 <!-- Ends  -->	
 
 
@@ -106,26 +125,21 @@
     
     
     
+    <!-- Here this division begins the global footer -->
     
-    
-<!--    <footer>
-    	<div class="">
-				<p class="">Do business with Parrishstreet firms (1-800-PARRISH)</p>						
-				<ul class="">
-					<li><a href="#">Parrishstreet Info</a></li>
+   <footer id="homefooter" class="container">
+    	<div id="links">
+				<p class="left">Copyright &copy; 2012 Tulsa Applications Co. All rights reserved.</p>						
+				<ul class="piped right">
+					<li><a href="#">Overview</a></li>
 					<li><a href="#">Site Map</a></li>
-					<li><a href="#">RSS Feeds</a></li>
-					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Feeds</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="">Terms of Use</a></li>
+					<li><a href="">Privacy Policy</a></li>
 				</ul>
-				<div class="">
-					<p> Copyright &copy; 2012 Tulsa Inc. All rights reserved.</p>
-					<ul class="">
-						<li><a href="">Terms of Use</a></li>
-						<li><a href="">Privacy Policy</a></li>
-					</ul>	
-				</div>
-			</div>
-    </footer> -->
+		</div>
+    </footer>
     
     
     {% if debug %}{% include 'includes/debug.html' %}{% endif %}

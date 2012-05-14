@@ -19,15 +19,140 @@ section {
   display: block;
 }
 
+        /* ===========================================================================
+         The Parrishstreet Footer Division
+         ========================================================================== */
+ 
+#homefooter {
+  color: #6E6E6E;
+  font-size: 10px;
+  margin: 0 auto 22px;
+  text-align: center;
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+}
+
+#homefooter #links p.left {
+  float: left;
+  text-align: left;
+  text-indent: 10px;
+  width: auto;
+}
+
+#homefooter #links p {
+  margin-bottom: 0;
+  font-size: 10px;
+}
+
+#homefooter #links {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #E5E5E5;
+  border-style: solid;
+  border-width: 1px 0;
+  margin: 0 0 2em;
+  padding: 0.5em 0;
+}
+
+.piped:after {
+  clear: both;
+  content: ".";
+  display: block; 
+  height: 0;
+}
+
+#globalfooter #links ul.right {
+  float: right;
+  margin-bottom: 0; 
+  padding-right: 10px; 
+}
+
+.piped {
+  display: block;
+}
+
+ul {
+  list-style: none outside none;
+}
+
+#globalfooter .footercopy {
+  clear: both;
+}
+
+.footercopy {
+  color: #888888;
+  font-size: 10px !important;
+  line-height: 1.5;
+}
+
+#homefooter .footercopy p.copyright {
+  padding-right: 0.75em;
+}
+
+#homefooter .footercopy p {
+  display: inline;
+  margin-bottom: 0;
+}
+
+#homefooter .footercopy ul.piped:after {
+  display: none
+}
+
+.piped:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0; 
+}
+
+#homelfooter .footercopy ul.piped {
+  display: inline;
+  margin-bottom: 0;
+  padding-right: 1.2em;
+}
+
+#homefooter #links ul.piped li {
+  float: none;
+}
+
+.piped li {
+  display: inline; 
+}
+
+#homefooter #links ul.piped a {
+  margin-left: 0.5em;
+  padding-left: 0.5em;
+}
+
+#homefooter .piped a {
+  border-color: #CCCCCC;
+}
+
+.piped a.first {
+  border-left: 0 none !important;
+  margin-left: p !imporatnt;
+  padding-left: 0;
+}
+
+        /* ===========================================================================
+         End Parrishstreet Footer Division
+         ========================================================================== */
+
+
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 
-/*
- * Extra divisions
- */
+        /* ===========================================================================
+         The Parrishstreet Sub-Navigation division
+         ========================================================================== */
 
 .subnav {
 	background: none repeat scroll 0 0 #ffffff;
@@ -35,6 +160,10 @@ html {
 	text-align: center;
 	width: 100%;
 }
+
+        /* ===========================================================================
+         End Parrishstreet Sub-navigation division
+         ========================================================================== */
 ### {
 	background: url(../img/bg_home.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -42,6 +171,108 @@ html {
 	-o-background-size: cover;
 	background-size: cover;
 }
+
+/* ===========================================================================
+         Start Parrishstreet Businesses Styles division
+         ==============================================
+.grid .grid_2 {
+  width: 170px;
+}
+
+.grid_2 {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline;
+  float: left;
+  position: relative;
+}
+
+element.style {
+  opactity: 1; 
+}
+
+
+.grid .alpha {
+  clear: both;
+  margin-left: 0; 
+}
+
+.connection-item {
+  border-bottomL 1px solid #E5E5E5;
+  height: 370px;
+  margin-bottom 50px;
+}
+.firm-thumbnail {
+
+  
+}
+
+ /* ================================================================
+         Styles for the Firm Detail Template
+         ============================================================ */
+element.style {
+  display:block;
+  height: 1122px;
+  top: 123px;
+  z-index: 10;
+}
+
+#projectviewer {
+  height: 1px;
+  overflow: hidden;
+  position: relative;
+  top: 122px;
+  width: 100%;
+}
+
+#projectviewer .mid {
+  height: 100%;
+  padding: 50px 0;
+  width: 100%;
+}
+
+#slider {
+  height: 800px;
+  width: 100%;
+}
+
+#slider article {
+  background: none repeat scroll 0 0 transparent;
+  min-height: 600px;
+  min-width: 100%;
+}
+
+.portfolio-item {
+  display: block;
+}
+
+.grid .grid_4 {
+  width: 360px;
+}
+
+.grid .alpha {
+  clear: both;
+  margin-left: 0;
+}
+
+.grid_1, .grid_4, .grid_6 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.grid .grid_8 {
+  width: 740px;
+}
+
+.grid .omega {
+  margin-right: 0;
+}
+ /* ================================================================
+         End Styles for the Firm Detail Template
+         ============================================================ */
+
+
+
 
 /*
  * Continue Bootstrap divisions 

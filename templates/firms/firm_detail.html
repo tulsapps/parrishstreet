@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+
+<div id="projectviewer" class="portfolio " style="display: block; z-index: 10; height: 1122px; top: 123px;">
+    <div class="grid">
+        <div id="project_loader" class="loader" style="width: 100%; margin: 0px; background-color: rgb(255, 255, 255); display: none;">&nbsp;</div>
+    </div>
+    <div class="mid clearfix hide-mid">
+        <div id="slider" class="clearfix">
+            <article id="target" class="portfolio-item">
+                <div class="grid">
+					<div class="grid_4 alpha">
+						<hgroup>
+							<h3 class="sub">{{sector.get_sector_object}}</h3>
+							<h1>{{firm.get_firm_object}}</h1>
+						</hgroup>
+						<h5>Big Benefit </h5>
+						<p>{{firm.value_proposition}}</p>
+						<h5>Business Description</h5>
+						<p>firm.firm_overview</p>
+						
+						
+						{% if product or service %}
+							<h5>Offerings</h5>
+						
+							<aside class="detail-info">
+								{% if product.bestseller or service.bestseller %}
+							    	<span>	
+										<label>Best Seller</label>	
+										{{product.bestseller}}
+										{{service.bestseller}}
+									</span>	
+								{% endif %}	
+						{% endif %}
+							</span>
+							<span>	
+							<label>Info:</label>
+								<a target="_blank" href="http://www.rabobank.nl">www.rabobank.nl</a>
+							</span>
+						</aside>
+						{% endif %}
+						
+						
+						<h5 class="toggle">Competitors</h5>
+						<aside class="toggler">
+							<a href="/projects/x7/create-your-world/">Concept Create Your World</a>
+							<br>
+							<a href="/projects/38/change-your-world/">Concept Change Your World</a>
+							<br>
+						</aside>
+					</div>
+					<div class="grid_8 omega">
+						<div class="controls">
+							<a class="right close" href="#">X</a>
+							<div id="ps1336931356556" class="slide-pager">
+								<a class="activeSlide" href="#">1</a>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<a href="#">5</a>
+							</div>
+						</div>
+						<div class="slider" style="position: relative; overflow: hidden;">
+							<div id="si1336931353_5929" class="slide clearfix" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 6; opacity: 1;">
+								<div class="grid_8 alpha omega push_bottom">
+								<img alt="Media" src="http://www.placeholdit.com/740x493">
+							</div>
+							<div class="grid_8 alpha omega push_bottom"></div>
+							</div>
+							<div id="####" class="slide clearfix" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 4;">
+						</div>
+						<div id="si1336931356556_prev" class="item_pager_prev"></div>
+						<div id="si1336931356556_next" class="item_pager_next"></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</article>
+		</div>	
+		<a id="prev_project" class="project_pager prev ir" href="#prev_project">Previous</a>
+		<a id="next_project" class="project_pager next ir" href="#next_project">Next</a>
+	</div>
+  <div class="clearfix"></div>
+</div>

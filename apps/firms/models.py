@@ -1,44 +1,58 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class Category(models.Model):
-    title = models.CharField(max_length=50, help_text="Suggest value...must be unique.")
+from markdown import markdown
+from tagging.fields import TagField 
+
+class Sector(models.Model):
+    title = models.CharField(max_length=50)
     slug = models.SlugField(unique=True)
     description = models.TextField()
     
     class Meta:
         ordering = ['title']
-        verbose_name_plural = "Categories"
     
     def __unicode__(self):
         return self.title
     
     def get_absolute_url(self):
-        return "/categories/%s/" %self.slug
+        return "/sectors/%s/" %self.slug
 
 class Firm(models.Model):
-    #Basic Information
+    # Summary Data
+    owner = models.ForeignKey(User)
+    firm_name = models.CharField(max_length=75)
+    firm_overview = models.TextField(editable=False, blank=True)
+    value_proposition = models.TextField(editable=False, blank=True)
+    tag = TagField()
+    featured = models.BooleanField(default=False)
+    
+    # Physical Location Data
     address_1 = models.CharField(max_length=75)
     address_2 = models.CharField(max_length=75)
-    categories = models.ManyToManyField(Category)
     city = models.CharField(max_length=50)
-    email = models.EmailField(max_length=254)
-    firm_name = models.CharField(max_length=75)
-    overview = models.TextField(max_length=255)
-    owner = models.ForeignKey(User)
-    phone = models.IntegerField(max_length=15)
-    state = models.CharField(max_length=50)
-    website = models.URLField(max_length=200)
-    zip_code = models.IntegerField(max_length=5)
+    state = models.CharField(max_length=2)
+    zip_code = models.CharField(max_length=5)
+    #lng = 
+    #lat = 
+    
+    # Virtual Location Data
+    #website = models.URLField(unique=True)
+    #email = models.EmailField(max_length=254)
+    #phone = models.CharField(max_length=15)
 
-    # class Meta:
-        # ordering = ['Type']
+    
+    #class Meta:
+        #ordering = ['']
     
     def __unicode__(self):
         return self.firm_name
     
     def save(self, force_insert=False, force_update=False):
-        self.firm_overview_html
+        self.firm_overview = markdown(self.firm_overview)
+        if self.value_proposition:
+            self.value_proposition_html = markdown(self.value_proposition)
+        super(Firm, self).save(force_insert, force_update)
           
     def get_absolute_url(self):
         return "/firms/%s/" %self.firm_name
