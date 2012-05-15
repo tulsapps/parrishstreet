@@ -1,18 +1,25 @@
-{% extends "base.html" %}
+{% load i18n %}
+{% load ifsetting_tag %}
 
-{% for firm in firm_list %}
-    <div class="grid_2 connection-item alpha">
-        <img src="http://www.placehold.it/170x224"/>
-        <h5>{{firm.firm_name }}</h5>
-        <p class="link">
-        {% if firm.value_proposition_html %}
-            {{ firm.value_proposition|safe }}
-        {% else %} 
-            {{ firm.firm_overview|truncatewords_html:"50"|safe }} 
-        <a href="{{ firm.get_absolute_url }}"
-        Discover {{  firm.firm_name }}
-        </a>
-        {% endif %}
-        </p>
-    </div>
-{% endfor %}
+
+{% block content %}
+<div class="container">
+<p> Yes, youve reached the Firm templated. Congrats</p>
+	{% for firm in firm_list %}
+    	<div class="grid_2 connection-item alpha">
+        	<img src="http://www.placehold.it/170x224"/>
+        	<h5>{{Firm.firm_name }}</h5>
+        	<p class="link">
+        	{% if Firm.value_proposition_html %}
+            	{{ Firm.value_proposition|safe }}
+        	{% else %} 
+            	{{ Firm.firm_overview|truncatewords_html:"50"|safe }} 
+        	<a href="{{ Firm.get_absolute_url }}"
+        	Discover {{  Firm.firm_name }}
+        	</a>
+        	{% endif %}
+        	</p>
+    	</div>
+	{% endfor %}
+</div>
+{% endblock %}
