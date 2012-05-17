@@ -24,7 +24,7 @@ urlpatterns = patterns("",
     url(r"^notices/", include("notification.urls")),
     url(r"^announcements/", include("announcements.urls")),
     url(r"^geo/$", include("geo.urls")),
-    url(r"^firms/$", include("firms.urls")),
+    url(r"^businesses/$", include("firms.urls")),
 )
 
 

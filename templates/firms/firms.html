@@ -1,3 +1,4 @@
+{% extends "site_base.html"%}
 {% load i18n %}
 {% load ifsetting_tag %}
 
@@ -8,7 +9,7 @@
 	{% for firm in firm_list %}
     	<div class="grid_2 connection-item alpha">
         	<img src="http://www.placehold.it/170x224"/>
-        	<h5>{{Firm.firm_name }}</h5>
+        	<h5>{{ Firm.firm_name }}</h5>
         	<p class="link">
         	{% if Firm.value_proposition_html %}
             	{{ Firm.value_proposition|safe }}

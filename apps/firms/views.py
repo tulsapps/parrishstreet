@@ -12,9 +12,9 @@ def firm_detail(request):
     return render_to_response('firm/firm_detail.html', 
                               { 'firm': firm })
     
-def sector_list(request):
+def sector_index(request):
     return render_to_response('firms/sector_list.html',
-                              { 'object_list': Sector.objects.all() })
+                              { 'sector_list': Sector.objects.all() })
 
 def sector_detail(reguest, slug):
     sector = get_object_or_404(Sector, slug=slug)

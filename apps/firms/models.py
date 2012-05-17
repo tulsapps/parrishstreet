@@ -24,7 +24,7 @@ class Firm(models.Model):
     firm_name = models.CharField(max_length=75)
     firm_overview = models.TextField(editable=False, blank=True)
     value_proposition = models.TextField(editable=False, blank=True)
-    tag = TagField()
+    
     featured = models.BooleanField(default=False)
     
     # Physical Location Data
