@@ -7,9 +7,7 @@ admin.autodiscover()
 
 from pinax.apps.account.openid_consumer import PinaxConsumer
 
-
 handler500 = "pinax.views.server_error"
-
 
 urlpatterns = patterns("",
     url(r"^$", direct_to_template, {
@@ -23,8 +21,10 @@ urlpatterns = patterns("",
     url(r"^profiles/", include("idios.urls")),
     url(r"^notices/", include("notification.urls")),
     url(r"^announcements/", include("announcements.urls")),
-    url(r"^geo/$", include("geo.urls")),
+    url(r"^locationfinder/$", include("geo.urls")),
     url(r"^businesses/$", include("firms.urls")),
+    url(r"^products/$", include("products.urls")),
+    url(r"^services/$", include("services.urls")),
 )
 
 

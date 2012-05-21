@@ -39,12 +39,12 @@
 			   				</a>
 			   			</li>
 			   			<li>
-			   			    <a href="{ url products }">  
+			   			    <a href="{% url products %}">  
 			   					products
 			   				</a>
 			   			</li>
 			   			<li>
-			   				<a href="{ url services }">
+			   				<a href="{% url services %}">
 			   					services
 			   				</a>
 			   			</li>
@@ -54,53 +54,16 @@
 			   				</a>
 			   			</li>
 			   			<li>
-			   				<a href="{ url journal }">
-			   					journal
-			   				</a>
-			   			</li>
-			   			<li>
-			   				<a href="{ url analytics }">
-			   					analytics
+			   				<a href="{% url geo %}">
+			   					location finder
 			   				</a>
 			   			</li>
 			   		 </ul>
 			   		 <ul class="nav pull-right">
 			   		 	<li class="dropdown">
 			   		 		{% url acct_login as login_url %}
-			   		 		<a href="{{ login_url }}" >
-			   		 		login
-			   		 		</a>
-			   		 	</li>
-			   		 		<ul class="dropdown-menu">
-			   		 		     <li>
-			   		 		        <a href="{ url activity }">
-			   		 		        activity
-			   		 		        </a>
-			   		 		    </li>
-			   		 		     <li>
-			   		 		        <a href="{ url settings }">
-			   		 		        settings
-			   		 		        </a>
-			   		 		    </li>
-			   		 		     <li>
-			   		 		        <a href="{ url signup }">
-			   		 		        logout
-			   		 		        </a>
-			   		 		    </li>
-			   		 		    <li>
-			   				        <a href="{ url recommended }">
-			   					    recommendations
-			   				        </a>
-			   			        </li>
-			   		 		</ul>			   		 	
-			   		 	<li>
-			   		 		<a href="{ url something }">
-			   		 			<i class="icon-list-alt"></i>
-			   		 		</a>
-			   		 	</li>
-			   		 	<li>
-			   		 		<a href="#">
-			   		 			<i class="icon-cog"></i>
+			   		 		<a href="{{ login_url }}">
+			   		 		account
 			   		 		</a>
 			   		 	</li>
 			   		 </ul>
@@ -110,16 +73,18 @@
 
 		
 	<!-- Here begins the sub-navigation behavior -->
-			<div class="subnav">
-			</div>    
+	<div class="subnav">
+		{% block subnav %}			  
+		{% endblock subnav %}
+	</div>  
 	<!-- Ends  -->	
 
 
 
-	    
-	{% block content %}
-	{% endblock content %}
-    
+	<div class="container">
+		{% block content %}
+		{% endblock content %}
+    </div>    
     
     
     <!-- Here this division begins the global footer -->

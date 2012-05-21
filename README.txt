@@ -1,0 +1,1 @@
+Parrishstreet is a discovery application for African American firms in the United States. 

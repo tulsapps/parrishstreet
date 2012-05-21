@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Django settings for basic pinax project.
+# Tulsa Applications Co. Parrishstreet settings. 
 
 import os.path
 import posixpath
@@ -178,8 +178,11 @@ INSTALLED_APPS = [
     # project
     "about",
     "profiles",
-    #"geo",
+    
+    "products",
+    "services",
     "firms",
+    "geo",
 ]
 
 LOGGING = {
