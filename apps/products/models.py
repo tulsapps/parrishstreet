@@ -1,8 +1,10 @@
 from django.db import models 
 
 class Product(models.Model):
+    # Meta Data
     product_name = models.CharField(max_length=100)
-    bigbenefit = models.TextField(max_length=500)
+    #big_benefit = models.TextField(max_length=500)
+    
     
     class Meta:
         ordering = ['product_name']

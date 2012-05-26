@@ -171,17 +171,18 @@ INSTALLED_APPS = [
     "markdown",
     "tagging",
     
-    # Pinax
+    # pinax
     "pinax.apps.account",
     "pinax.apps.signup_codes",
     
     # project
     "about",
     "profiles",
-    
     "products",
     "services",
     "firms",
+    
+    # global information services
     "geo",
 ]
 

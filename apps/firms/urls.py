@@ -19,5 +19,6 @@ sector_list_info = {
 
 urlpatterns = patterns("",
     url(r"^$", list_detail.object_list, firm_list_info, name='firms'),
+    url(r"^(?P<object_id>\d+)/$", list_detail.object_detail, firm_list_info, name='firm_detail'),
     url(r"^sectors$", list_detail.object_list, sector_list_info, name='sectors'),                 
 )
