@@ -1,10 +1,5 @@
 from django.contrib import admin
-from apps.firms.models import Sector, Firm
-
-class SectorAdmin(admin.ModelAdmin):
-    prepopulated_fields = { 'slug': ['title'] }
-
-admin.site.register(Sector, SectorAdmin)
+from apps.firms.models import Firm
 
 class FirmAdmin(admin.ModelAdmin):
     pass

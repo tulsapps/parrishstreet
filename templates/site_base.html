@@ -90,8 +90,9 @@
     
    <footer id="homefooter" class="container">
     	<div id="links">
+    		<div style="padding: 0 15px 0 15px;">
 				<p class="left">Copyright &copy; 2012 <a href="#">Tulsa Applications Co.</a> All rights reserved.</p>						
-				<ul class="piped right">
+				<ul class="piped right" style="margin: 0 0 3px 25px;">
 					<li><a href="{% url about %}">About</a></li>
 					<li><a href="#">Site Map</a></li>
 					<li><a href="#">Feeds</a></li>
@@ -99,10 +100,11 @@
 					<li><a href="">Terms of Use</a></li>
 					<li><a href="">Privacy Policy</a></li>
 				</ul>
+			</div>
 		</div>
     </footer>
     
-    {% if debug %}{% include 'includes/debug.html' %}{% endif %}
+   {# {% if debug %}{% include 'includes/debug.html' %}{% endif %} #}
     
     {% block javascript_library %}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
