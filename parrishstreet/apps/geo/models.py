@@ -12,4 +12,6 @@ class Waypoint(models.Model):
     city = models.CharField(max_length=50, blank=True)
     state = models.CharField(max_length=2, blank=True)
     zip_code = models.CharField(max_length=5, blank=True) 
+    lon = models.FloatField
+    lat = models.FloatField
 
