@@ -1,0 +1,26 @@
+{% extends "site_base.html" %}
+
+{% block subnav %}
+{% endblock subnav %}
+
+{% block content %}
+	<div class="container">
+		<div class="#">
+			{% for firm in firm_list %}
+    			<div class="grid_2 connection-item alpha">
+        			<img src="http://www.placehold.it/150x150"/>
+        			<a href="{{firm.get_absolute_url}} style="width: 150px;">
+        				<h5 style="width: 150px;">{{ firm.firm_name }}</h5>
+        			</a>
+        			<p style="width: 150px; padding: 1px 1px 1px 1px;">
+        			{% if firm.value_proposition %}
+            			{{ firm.value_proposition|safe }}
+        			{% else %} 
+            			{{ firm.firm_overview|truncatewords_html:"15"|safe }} 
+        			{% endif %}
+        			</p>
+    			</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
